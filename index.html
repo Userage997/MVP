@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Маньяк Убийцев | OSINT Specialist</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Intro Animation -->
+    <div class="intro-screen" id="introScreen">
+        <div class="intro-content">
+            <div class="neon-loader"></div>
+            <h1 class="intro-title">MANYAK <span class="glitch" data-text="УБИЙЦ">УБИЙЦ</span></h1>
+            <p class="intro-subtitle">Загрузка системы...</p>
+        </div>
+    </div>
+
+    <!-- Main Screen -->
+    <div class="main-screen" id="mainScreen" style="display: none;">
+        <!-- Background elements -->
+        <div class="background-elements">
+            <div class="particle-container"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header class="header">
+            <button class="creator-btn" id="creatorBtn">
+                <i class="fas fa-code"></i> Создатель сайта
+            </button>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Nickname Badge -->
+            <div class="nickname-container">
+                <div class="neon-badge">
+                    <span class="neon-text">Маньяк Убийцев</span>
+                    <div class="neon-glow"></div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div class="description-container">
+                <p class="description-text">
+                    Специалист в OSINT разведке, борюсь с киберпреступностью в интернете, 
+                    продаю обучения, сношу и морожу аккаунты и продаю физ номера.
+                </p>
+            </div>
+
+            <!-- Buttons Grid -->
+            <div class="buttons-grid">
+                <button class="nav-btn project-btn" data-target="project">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>Проект</span>
+                    <div class="btn-hover-effect"></div>
+                </button>
+
+                <button class="nav-btn price-btn" data-target="price">
+                    <i class="fas fa-tags"></i>
+                    <span>Прайс</span>
+                    <div class="btn-hover-effect"></div>
+                </button>
+
+                <button class="nav-btn shop-btn" data-target="shop">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Шоп</span>
+                    <div class="btn-hover-effect"></div>
+                </button>
+
+                <button class="nav-btn contact-btn" data-target="contact">
+                    <i class="fas fa-comments"></i>
+                    <span>Связаться со мной</span>
+                    <div class="btn-hover-effect"></div>
+                </button>
+
+                <button class="nav-btn about-btn" id="aboutBtn">
+                    <i class="fas fa-user"></i>
+                    <span>Обо мне</span>
+                    <div class="btn-hover-effect"></div>
+                </button>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="cyber-line"></div>
+            <p class="footer-text">OSINT | Cybersecurity | Privacy Protection</p>
+        </footer>
+    </div>
+
+    <!-- Content Screens -->
+    <div class="content-screen" id="contentScreen" style="display: none;">
+        <button class="back-btn" id="backBtn">
+            <i class="fas fa-arrow-left"></i> Назад
+        </button>
+        
+        <div class="content-wrapper">
+            <h2 class="content-title" id="contentTitle"></h2>
+            <p class="content-text" id="contentText"></p>
+            
+            <a class="telegram-btn" id="telegramBtn" target="_blank" style="display: none;">
+                <i class="fab fa-telegram"></i> Перейти в Telegram
+            </a>
+        </div>
+    </div>
+
+    <!-- About Screen -->
+    <div class="about-screen" id="aboutScreen" style="display: none;">
+        <button class="back-btn" id="backAboutBtn">
+            <i class="fas fa-arrow-left"></i> Назад
+        </button>
+        
+        <div class="about-content">
+            <h2 class="about-title">Обо мне</h2>
+            <div class="about-text-container">
+                <p>Вошёл в комьюнити я в 2024 до этого был ДДосером и состоял в группировке NoName57.</p>
+                <p>В 2025 году в августе мой первый клан был Madness, изначально я был троллем, но после того как меня обманули, я начал изучать OSINT.</p>
+                <p>Мой первый учитель был такой человек, как чарли. Он дал мне базу в осинте, далее я начал плотно изучать эту сферу и кибербезопасность, заказал книги про хакинг, осинт, читал статьи, после этого я освоил всю тему начал изучать пробив физ аккаунтов и соц инженерию, так же хуминт, я все изучил, только после этого, я с владельцем кланом Madness.</p>
+                <p>Кланом мы рейдили Эспаду и валиднули половину их клана. После этого, в феврале 2025, я написал свой первый код и научился делать фишинг ссылки, так я создал свой ботнет, но к сожалению его снесли, после этого меня раскрутил мой знакомый и я на набрал большой фейм.</p>
+                <p>Так же я анализировал и создал инструкцию по анонимности в интернете. Было довольно много людей, которые придерживались моих правил, и благодаря мне, их так и не нашли. Например: Кави, Крипс и другие феймовые личности.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
