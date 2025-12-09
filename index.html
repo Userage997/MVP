@@ -5,128 +5,345 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Маньяк Убийцев | OSINT Specialist</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Montserrat:wght@300;400;600;700&family=Russo+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
     <!-- Intro Animation -->
     <div class="intro-screen" id="introScreen">
-        <div class="intro-content">
-            <div class="neon-loader"></div>
-            <h1 class="intro-title">MANYAK <span class="glitch" data-text="УБИЙЦ">УБИЙЦ</span></h1>
-            <p class="intro-subtitle">Загрузка системы...</p>
+        <div class="intro-container">
+            <div class="cyber-grid"></div>
+            <div class="intro-content animate__animated animate__fadeIn">
+                <div class="intro-logo">
+                    <div class="logo-circle"></div>
+                    <div class="logo-circle"></div>
+                    <div class="logo-circle"></div>
+                    <div class="logo-text">MANYAK</div>
+                </div>
+                <h1 class="intro-title glitch-text" data-text="УБИЙЦ">УБИЙЦ</h1>
+                <div class="loading-bar">
+                    <div class="loading-progress"></div>
+                </div>
+                <p class="intro-subtitle">ИНИЦИАЛИЗАЦИЯ СИСТЕМЫ...</p>
+            </div>
         </div>
     </div>
 
     <!-- Main Screen -->
     <div class="main-screen" id="mainScreen" style="display: none;">
-        <!-- Background elements -->
-        <div class="background-elements">
-            <div class="particle-container"></div>
-            <div class="floating-shapes">
-                <div class="shape shape-1"></div>
-                <div class="shape shape-2"></div>
-                <div class="shape shape-3"></div>
-                <div class="shape shape-4"></div>
+        <!-- Animated Background -->
+        <div class="cyber-background">
+            <canvas id="matrixCanvas"></canvas>
+            <div class="gradient-overlay"></div>
+            <div class="floating-orbs">
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+                <div class="orb orb-3"></div>
             </div>
         </div>
 
         <!-- Header -->
-        <header class="header">
-            <button class="creator-btn" id="creatorBtn">
-                <i class="fas fa-code"></i> Создатель сайта
-            </button>
+        <header class="main-header">
+            <div class="header-content">
+                <div class="logo-mini animate__animated animate__fadeInLeft">
+                    <span class="logo-icon">M</span>
+                    <span class="logo-text">ANYAK</span>
+                </div>
+                <button class="creator-btn animate__animated animate__fadeInRight" id="creatorBtn">
+                    <i class="fas fa-terminal"></i>
+                    <span>Создатель сайта</span>
+                    <div class="btn-sparkle"></div>
+                </button>
+            </div>
         </header>
 
         <!-- Main Content -->
-        <main class="main-content">
-            <!-- Nickname Badge -->
-            <div class="nickname-container">
-                <div class="neon-badge">
-                    <span class="neon-text">Маньяк Убийцев</span>
-                    <div class="neon-glow"></div>
+        <main class="main-content animate__animated animate__fadeInUp">
+            <!-- Nickname Section -->
+            <div class="nickname-section">
+                <div class="nickname-wrapper">
+                    <div class="nickname-glitch">
+                        <div class="glitch-layer glitch-layer-1">Маньяк Убийцев</div>
+                        <div class="glitch-layer glitch-layer-2">Маньяк Убийцев</div>
+                        <div class="glitch-layer glitch-layer-3">Маньяк Убийцев</div>
+                        <div class="nickname-main">Маньяк Убийцев</div>
+                    </div>
+                    <div class="nickname-underline"></div>
                 </div>
             </div>
 
             <!-- Description -->
-            <div class="description-container">
-                <p class="description-text">
-                    Специалист в OSINT разведке, борюсь с киберпреступностью в интернете, 
-                    продаю обучения, сношу и морожу аккаунты и продаю физ номера.
-                </p>
+            <div class="description-section">
+                <div class="description-card">
+                    <div class="card-glow"></div>
+                    <p class="description-text">
+                        <i class="fas fa-shield-alt"></i>
+                        Специалист в OSINT разведке, борюсь с киберпреступностью в интернете, 
+                        продаю обучения, сношу и морожу аккаунты и продаю физ номера.
+                    </p>
+                </div>
             </div>
 
             <!-- Buttons Grid -->
             <div class="buttons-grid">
-                <button class="nav-btn project-btn" data-target="project">
-                    <i class="fas fa-project-diagram"></i>
-                    <span>Проект</span>
-                    <div class="btn-hover-effect"></div>
+                <!-- Project Button -->
+                <button class="cyber-btn project-btn animate__animated animate__fadeIn" data-target="project" style="--delay: 0.1s">
+                    <div class="btn-content">
+                        <div class="btn-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="btn-text">
+                            <span class="btn-title">ПРОЕКТ</span>
+                            <span class="btn-subtitle">Telegram-канал</span>
+                        </div>
+                    </div>
+                    <div class="btn-glow"></div>
+                    <div class="btn-border">
+                        <div class="border-top"></div>
+                        <div class="border-right"></div>
+                        <div class="border-bottom"></div>
+                        <div class="border-left"></div>
+                    </div>
                 </button>
 
-                <button class="nav-btn price-btn" data-target="price">
-                    <i class="fas fa-tags"></i>
-                    <span>Прайс</span>
-                    <div class="btn-hover-effect"></div>
+                <!-- Price Button -->
+                <button class="cyber-btn price-btn animate__animated animate__fadeIn" data-target="price" style="--delay: 0.2s">
+                    <div class="btn-content">
+                        <div class="btn-icon">
+                            <i class="fas fa-tags"></i>
+                        </div>
+                        <div class="btn-text">
+                            <span class="btn-title">ПРАЙС</span>
+                            <span class="btn-subtitle">Мои услуги</span>
+                        </div>
+                    </div>
+                    <div class="btn-glow"></div>
+                    <div class="btn-border">
+                        <div class="border-top"></div>
+                        <div class="border-right"></div>
+                        <div class="border-bottom"></div>
+                        <div class="border-left"></div>
+                    </div>
                 </button>
 
-                <button class="nav-btn shop-btn" data-target="shop">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span>Шоп</span>
-                    <div class="btn-hover-effect"></div>
+                <!-- Shop Button -->
+                <button class="cyber-btn shop-btn animate__animated animate__fadeIn" data-target="shop" style="--delay: 0.3s">
+                    <div class="btn-content">
+                        <div class="btn-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="btn-text">
+                            <span class="btn-title">ШОП</span>
+                            <span class="btn-subtitle">Товары</span>
+                        </div>
+                    </div>
+                    <div class="btn-glow"></div>
+                    <div class="btn-border">
+                        <div class="border-top"></div>
+                        <div class="border-right"></div>
+                        <div class="border-bottom"></div>
+                        <div class="border-left"></div>
+                    </div>
                 </button>
 
-                <button class="nav-btn contact-btn" data-target="contact">
-                    <i class="fas fa-comments"></i>
-                    <span>Связаться со мной</span>
-                    <div class="btn-hover-effect"></div>
+                <!-- Contact Button -->
+                <button class="cyber-btn contact-btn animate__animated animate__fadeIn" data-target="contact" style="--delay: 0.4s">
+                    <div class="btn-content">
+                        <div class="btn-icon">
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+                        <div class="btn-text">
+                            <span class="btn-title">СВЯЗЬ</span>
+                            <span class="btn-subtitle">Написать мне</span>
+                        </div>
+                    </div>
+                    <div class="btn-glow"></div>
+                    <div class="btn-border">
+                        <div class="border-top"></div>
+                        <div class="border-right"></div>
+                        <div class="border-bottom"></div>
+                        <div class="border-left"></div>
+                    </div>
                 </button>
 
-                <button class="nav-btn about-btn" id="aboutBtn">
-                    <i class="fas fa-user"></i>
-                    <span>Обо мне</span>
-                    <div class="btn-hover-effect"></div>
+                <!-- About Button -->
+                <button class="cyber-btn about-btn animate__animated animate__fadeIn" id="aboutBtn" style="--delay: 0.5s">
+                    <div class="btn-content">
+                        <div class="btn-icon">
+                            <i class="fas fa-user-secret"></i>
+                        </div>
+                        <div class="btn-text">
+                            <span class="btn-title">ОБО МНЕ</span>
+                            <span class="btn-subtitle">Моя история</span>
+                        </div>
+                    </div>
+                    <div class="btn-glow"></div>
+                    <div class="btn-border">
+                        <div class="border-top"></div>
+                        <div class="border-right"></div>
+                        <div class="border-bottom"></div>
+                        <div class="border-left"></div>
+                    </div>
                 </button>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-value">2024</div>
+                        <div class="stat-label">Начало пути</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">3+</div>
+                        <div class="stat-label">Проектов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">24/7</div>
+                        <div class="stat-label">Доступность</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">OSINT</div>
+                        <div class="stat-label">Специализация</div>
+                    </div>
+                </div>
             </div>
         </main>
 
         <!-- Footer -->
-        <footer class="footer">
-            <div class="cyber-line"></div>
-            <p class="footer-text">OSINT | Cybersecurity | Privacy Protection</p>
+        <footer class="main-footer">
+            <div class="footer-content">
+                <div class="footer-line"></div>
+                <div class="footer-text">
+                    <span>OSINT COMMUNITY</span>
+                    <span class="separator">|</span>
+                    <span>CYBERSECURITY</span>
+                    <span class="separator">|</span>
+                    <span>PRIVACY PROTECTION</span>
+                </div>
+            </div>
         </footer>
     </div>
 
     <!-- Content Screens -->
     <div class="content-screen" id="contentScreen" style="display: none;">
-        <button class="back-btn" id="backBtn">
-            <i class="fas fa-arrow-left"></i> Назад
-        </button>
+        <div class="screen-background">
+            <div class="screen-grid"></div>
+            <div class="screen-glow"></div>
+        </div>
         
-        <div class="content-wrapper">
-            <h2 class="content-title" id="contentTitle"></h2>
-            <p class="content-text" id="contentText"></p>
+        <div class="screen-content">
+            <button class="back-btn" id="backBtn">
+                <i class="fas fa-chevron-left"></i>
+                <span>НАЗАД</span>
+            </button>
             
-            <a class="telegram-btn" id="telegramBtn" target="_blank" style="display: none;">
-                <i class="fab fa-telegram"></i> Перейти в Telegram
-            </a>
+            <div class="content-container animate__animated">
+                <div class="content-header">
+                    <div class="content-icon" id="contentIcon"></div>
+                    <h2 class="content-title" id="contentTitle"></h2>
+                    <div class="content-line"></div>
+                </div>
+                
+                <div class="content-body">
+                    <p class="content-text" id="contentText"></p>
+                    
+                    <div class="telegram-section">
+                        <a class="telegram-btn" id="telegramBtn" target="_blank">
+                            <div class="tg-icon">
+                                <i class="fab fa-telegram-plane"></i>
+                            </div>
+                            <div class="tg-text">
+                                <span class="tg-title">ПЕРЕЙТИ В TELEGRAM</span>
+                                <span class="tg-subtitle">Откроется в новом окне</span>
+                            </div>
+                            <div class="tg-arrow">
+                                <i class="fas fa-external-link-alt"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- About Screen -->
     <div class="about-screen" id="aboutScreen" style="display: none;">
-        <button class="back-btn" id="backAboutBtn">
-            <i class="fas fa-arrow-left"></i> Назад
-        </button>
+        <div class="screen-background about-bg">
+            <div class="about-particles"></div>
+            <div class="about-gradient"></div>
+        </div>
         
-        <div class="about-content">
-            <h2 class="about-title">Обо мне</h2>
-            <div class="about-text-container">
-                <p>Вошёл в комьюнити я в 2024 до этого был ДДосером и состоял в группировке NoName57.</p>
-                <p>В 2025 году в августе мой первый клан был Madness, изначально я был троллем, но после того как меня обманули, я начал изучать OSINT.</p>
-                <p>Мой первый учитель был такой человек, как чарли. Он дал мне базу в осинте, далее я начал плотно изучать эту сферу и кибербезопасность, заказал книги про хакинг, осинт, читал статьи, после этого я освоил всю тему начал изучать пробив физ аккаунтов и соц инженерию, так же хуминт, я все изучил, только после этого, я с владельцем кланом Madness.</p>
-                <p>Кланом мы рейдили Эспаду и валиднули половину их клана. После этого, в феврале 2025, я написал свой первый код и научился делать фишинг ссылки, так я создал свой ботнет, но к сожалению его снесли, после этого меня раскрутил мой знакомый и я на набрал большой фейм.</p>
-                <p>Так же я анализировал и создал инструкцию по анонимности в интернете. Было довольно много людей, которые придерживались моих правил, и благодаря мне, их так и не нашли. Например: Кави, Крипс и другие феймовые личности.</p>
+        <div class="screen-content">
+            <button class="back-btn" id="backAboutBtn">
+                <i class="fas fa-chevron-left"></i>
+                <span>НАЗАД</span>
+            </button>
+            
+            <div class="about-container animate__animated">
+                <div class="about-header">
+                    <div class="about-avatar">
+                        <div class="avatar-circle"></div>
+                        <div class="avatar-icon">
+                            <i class="fas fa-user-secret"></i>
+                        </div>
+                    </div>
+                    <h2 class="about-title">ОБО МНЕ</h2>
+                    <div class="about-subtitle">История пути в OSINT</div>
+                </div>
+                
+                <div class="about-content">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">2016</div>
+                            <div class="timeline-content">
+                                <h3>Начало пути</h3>
+                                <p>Мой первый клан был Madness, изначально я был троллем, но после того как меня обманули, я начал изучать OSINT.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-year">2024</div>
+                            <div class="timeline-content">
+                                <h3>Вход в комьюнити</h3>
+                                <p>Вошел в комьюнити, до этого был ДДосером и состоял в группировке NoName57.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-year">Учитель</div>
+                            <div class="timeline-content">
+                                <h3>Первые знания</h3>
+                                <p>Мой первый учитель был такой человек, как чарли. Он дал мне базу в осинте, далее я начал плотно изучать эту сферу и кибербезопасность.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-year">2025</div>
+                            <div class="timeline-content">
+                                <h3>Первый код</h3>
+                                <p>В феврале 2025 написал свой первый код и научился делать фишинг ссылки, создал свой ботнет.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-year">Достижения</div>
+                            <div class="timeline-content">
+                                <h3>Рейды и валидации</h3>
+                                <p>С кланом Madness мы рейдили Эспаду и валиднули половину их клана.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-year">Наследие</div>
+                            <div class="timeline-content">
+                                <h3>Инструкция по анонимности</h3>
+                                <p>Анализировал и создал инструкцию по анонимности в интернете. Многие люди, придерживаясь моих правил, оставались не найденными.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
